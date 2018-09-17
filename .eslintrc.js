@@ -3,10 +3,10 @@ const WARN = 1
 const ERROR = 2
 
 module.exports = {
-  extends: 'airbnb',
+  // extends: 'airbnb',
   parser: 'babel-eslint',
   env: {
-    browser: true,
+    es6: true,
     node: true,
     'jest/globals': true
   },
@@ -23,7 +23,6 @@ module.exports = {
     'import/prefer-default-export': [OFF],
     'import/no-extraneous-dependencies': [OFF],
     'react/prop-types': [OFF],
-    'react/jsx-filename-extension': [WARN, { extensions: ['.js', '.jsx'] }],
     'react/no-find-dom-node': [OFF]
   }
 }

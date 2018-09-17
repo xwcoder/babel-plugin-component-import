@@ -1,6 +1,6 @@
 module.exports = {
   testEnvironment: 'node',
-  testRegex: '(test|spec)\\.(jsx?|tsx?)$',
+  testRegex: 'test/index.js',
   transform: {
     '^.+\\.jsx?$': 'babel-jest'
   },

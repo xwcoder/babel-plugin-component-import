@@ -1,0 +1,877 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`babel-plugin-comby-imports/general declarator variable 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/message/style/scss\\");
+
+var _message2 = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/message\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var a = _button.default;
+(0, _message2.default)('xxx');
+
+function App() {
+  var message = 'xxx';
+  return React.createElement(\\"div\\", null, message);
+}"
+`;
+
+exports[`babel-plugin-comby-imports/general export 1`] = `
+"\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", {
+  value: true
+});
+var _exportNames = {
+  ImageV: true,
+  Flex: true,
+  comby: true
+};
+Object.defineProperty(exports, \\"ImageV\\", {
+  enumerable: true,
+  get: function get() {
+    return _image.default;
+  }
+});
+Object.defineProperty(exports, \\"Flex\\", {
+  enumerable: true,
+  get: function get() {
+    return _flex.default;
+  }
+});
+Object.defineProperty(exports, \\"comby\\", {
+  enumerable: true,
+  get: function get() {
+    return _combyLibMobile.default;
+  }
+});
+exports.default = void 0;
+
+require(\\"@tencent/comby-lib-mobile_default/dist/image/style/scss\\");
+
+var _image = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/image\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+var _combyLibMobile = _interopRequireWildcard(require(\\"@tencent/comby-lib-mobile\\"));
+
+Object.keys(_combyLibMobile).forEach(function (key) {
+  if (key === \\"default\\" || key === \\"__esModule\\") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _combyLibMobile[key];
+    }
+  });
+});
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = _button.default;
+exports.default = _default;"
+`;
+
+exports[`babel-plugin-comby-imports/general expression array 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+var comby2 = _interopRequireWildcard(require(\\"@tencent/comby-lib-mobile\\"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var a = [_button.default, _flex.default];
+var b = {
+  'test': [_button.default]
+};
+[_button.default].map(function () {});
+var t = ['1', '2', _button.default, _button.default.Image, comby2.default];
+
+function render() {
+  var FlexV = {};
+  var a = [_button.default, FlexV];
+  var b = {
+    'test': [_button.default]
+  };
+  [_button.default].map(function () {});
+  var t = ['1', '2', _button.default, _button.default.Image, comby2.default, comby2];
+  t.forEach(function (item) {});
+}"
+`;
+
+exports[`babel-plugin-comby-imports/general expression assignment 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/feed/style/scss\\");
+
+var _feed = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/feed\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var myButton = null;
+myButton = _button.default;
+myButton = _button.default; // myButton = comby
+
+console.log(myButton);
+
+var ui10 = _feed.default.ui10,
+    ui11 = _feed.default.ui11,
+    uiRest = _objectWithoutProperties(_feed.default, [\\"ui10\\", \\"ui11\\"]);"
+`;
+
+exports[`babel-plugin-comby-imports/general expression binary 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var extraProps = undefined === _button.default ? {
+  type: 'primary'
+} : {};
+console.log(extraProps);
+
+function render() {
+  var Button = 1;
+  var isButton = Button === 1;
+}"
+`;
+
+exports[`babel-plugin-comby-imports/general expression call 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _flex.default)();
+
+_flex.default.layout('column');
+
+render(_flex.default);
+
+(function () {
+  var Flex = {};
+  render2(Flex, 0);
+})();"
+`;
+
+exports[`babel-plugin-comby-imports/general expression condition 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/select/style/scss\\");
+
+var _select = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/select\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_select.default ? 'a' : 'b';
+a ? _select.default : 2;"
+`;
+
+exports[`babel-plugin-comby-imports/general expression logical 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/text/style/scss\\");
+
+var _text = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/text\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ui = _button.default || _text.default || _flex.default;
+
+function render() {
+  var Text = function Text() {};
+
+  var ui = _button.default || Text;
+}
+
+var a = _flex.default.a;"
+`;
+
+exports[`babel-plugin-comby-imports/general expression member 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+ReactDOM.render(React.createElement(\\"div\\", null, React.createElement(_button.default, {
+  type: \\"primary\\"
+}, \\"comby Button\\")));
+
+function renderButton() {
+  var comby = {
+    Button: function Button() {}
+  };
+  ReactDOM.render(React.createElement(\\"div\\", null, React.createElement(comby.Button, {
+    type: \\"primary\\"
+  }, \\"Button\\")));
+}
+
+ReactDOM.render(React.createElement(\\"div\\", null, React.createElement(_flex.default.FlexIcon, {
+  type: \\"primary\\"
+}, \\"comby Button\\")));
+
+function renderFlex() {
+  var Flex = {
+    FlexIcon: function FlexIcon() {}
+  };
+  ReactDOM.render(React.createElement(\\"div\\", null, React.createElement(Flex.FlexIcon, {
+    type: \\"primary\\"
+  }, \\"comby Button\\")));
+}"
+`;
+
+exports[`babel-plugin-comby-imports/general expression new 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/image/style/scss\\");
+
+var _image = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/image\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var button = new _button.default(_image.default);
+var panel = new Panel(_button.default, _flex.default);
+
+function render() {
+  var Flex = function Flex() {};
+
+  var btn2 = new _button.default(_image.default);
+  var panel2 = new Panel(_button.default, Flex);
+}"
+`;
+
+exports[`babel-plugin-comby-imports/general property 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+ReactDOM.render(React.createElement(\\"div\\", {
+  component: _button.default
+}));
+var coms = {
+  button: _button.default
+};
+var btns = {
+  Button: _button.default
+};
+
+function render() {
+  var Button = function Button() {};
+
+  var cache = {
+    btn: Button
+  };
+}"
+`;
+
+exports[`babel-plugin-comby-imports/general statement if 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+if (_flex.default) {}
+
+if (a === _flex.default) {}
+
+if (a > _flex.default) {}
+
+function render() {
+  var Flex = function Flex() {};
+
+  if (Flex) {}
+
+  if (a === Flex) {}
+
+  if (a > Flex) {}
+}"
+`;
+
+exports[`babel-plugin-comby-imports/general statement return 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/toast/style/scss\\");
+
+var _toast2 = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/toast\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function a() {
+  return _toast2.default;
+}
+
+function b(toast) {
+  return toast;
+}
+
+function c() {
+  var toast = 'toast';
+  return toast;
+}
+
+function d() {
+  var toast = 'toast';
+  return function () {
+    return toast;
+  };
+}"
+`;
+
+exports[`babel-plugin-comby-imports/general statement switch 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/feed/style/scss\\");
+
+var _feed = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/feed\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/image/style/scss\\");
+
+var _image = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/image\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ui = null;
+
+switch (ui) {
+  case _flex.default:
+    ui = 1;
+    break;
+
+  case _button.default:
+    ui = 2;
+    break;
+
+  case _image.default:
+    ui = 3;
+    break;
+
+  default:
+    ui = 4;
+}
+
+switch (_feed.default) {
+  case _flex.default:
+    ui = 1;
+    break;
+
+  case _button.default:
+    ui = 2;
+    break;
+
+  default:
+    ui = 4;
+}"
+`;
+
+exports[`babel-plugin-component-import/general declarator variable 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/message/style/scss\\");
+
+var _message2 = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/message\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var a = _button.default;
+(0, _message2.default)('xxx');
+
+function App() {
+  var message = 'xxx';
+  return React.createElement(\\"div\\", null, message);
+}"
+`;
+
+exports[`babel-plugin-component-import/general export 1`] = `
+"\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", {
+  value: true
+});
+var _exportNames = {
+  ImageV: true,
+  Flex: true,
+  comby: true
+};
+Object.defineProperty(exports, \\"ImageV\\", {
+  enumerable: true,
+  get: function get() {
+    return _image.default;
+  }
+});
+Object.defineProperty(exports, \\"Flex\\", {
+  enumerable: true,
+  get: function get() {
+    return _flex.default;
+  }
+});
+Object.defineProperty(exports, \\"comby\\", {
+  enumerable: true,
+  get: function get() {
+    return _combyLibMobile.default;
+  }
+});
+exports.default = void 0;
+
+require(\\"@tencent/comby-lib-mobile_default/dist/image/style/scss\\");
+
+var _image = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/image\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+var _combyLibMobile = _interopRequireWildcard(require(\\"@tencent/comby-lib-mobile\\"));
+
+Object.keys(_combyLibMobile).forEach(function (key) {
+  if (key === \\"default\\" || key === \\"__esModule\\") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _combyLibMobile[key];
+    }
+  });
+});
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = _button.default;
+exports.default = _default;"
+`;
+
+exports[`babel-plugin-component-import/general expression array 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+var comby2 = _interopRequireWildcard(require(\\"@tencent/comby-lib-mobile\\"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var a = [_button.default, _flex.default];
+var b = {
+  'test': [_button.default]
+};
+[_button.default].map(function () {});
+var t = ['1', '2', _button.default, _button.default.Image, comby2.default];
+
+function render() {
+  var FlexV = {};
+  var a = [_button.default, FlexV];
+  var b = {
+    'test': [_button.default]
+  };
+  [_button.default].map(function () {});
+  var t = ['1', '2', _button.default, _button.default.Image, comby2.default, comby2];
+  t.forEach(function (item) {});
+}"
+`;
+
+exports[`babel-plugin-component-import/general expression assignment 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/feed/style/scss\\");
+
+var _feed = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/feed\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var myButton = null;
+myButton = _button.default;
+myButton = _button.default; // myButton = comby
+
+console.log(myButton);
+
+var ui10 = _feed.default.ui10,
+    ui11 = _feed.default.ui11,
+    uiRest = _objectWithoutProperties(_feed.default, [\\"ui10\\", \\"ui11\\"]);"
+`;
+
+exports[`babel-plugin-component-import/general expression binary 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var extraProps = undefined === _button.default ? {
+  type: 'primary'
+} : {};
+console.log(extraProps);
+
+function render() {
+  var Button = 1;
+  var isButton = Button === 1;
+}"
+`;
+
+exports[`babel-plugin-component-import/general expression call 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _flex.default)();
+
+_flex.default.layout('column');
+
+render(_flex.default);
+
+(function () {
+  var Flex = {};
+  render2(Flex, 0);
+})();"
+`;
+
+exports[`babel-plugin-component-import/general expression condition 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/select/style/scss\\");
+
+var _select = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/select\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_select.default ? 'a' : 'b';
+a ? _select.default : 2;"
+`;
+
+exports[`babel-plugin-component-import/general expression logical 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/text/style/scss\\");
+
+var _text = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/text\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ui = _button.default || _text.default || _flex.default;
+
+function render() {
+  var Text = function Text() {};
+
+  var ui = _button.default || Text;
+}
+
+var a = _flex.default.a;"
+`;
+
+exports[`babel-plugin-component-import/general expression member 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+ReactDOM.render(React.createElement(\\"div\\", null, React.createElement(_button.default, {
+  type: \\"primary\\"
+}, \\"comby Button\\")));
+
+function renderButton() {
+  var comby = {
+    Button: function Button() {}
+  };
+  ReactDOM.render(React.createElement(\\"div\\", null, React.createElement(comby.Button, {
+    type: \\"primary\\"
+  }, \\"Button\\")));
+}
+
+ReactDOM.render(React.createElement(\\"div\\", null, React.createElement(_flex.default.FlexIcon, {
+  type: \\"primary\\"
+}, \\"comby Button\\")));
+
+function renderFlex() {
+  var Flex = {
+    FlexIcon: function FlexIcon() {}
+  };
+  ReactDOM.render(React.createElement(\\"div\\", null, React.createElement(Flex.FlexIcon, {
+    type: \\"primary\\"
+  }, \\"comby Button\\")));
+}"
+`;
+
+exports[`babel-plugin-component-import/general expression new 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/image/style/scss\\");
+
+var _image = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/image\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var button = new _button.default(_image.default);
+var panel = new Panel(_button.default, _flex.default);
+
+function render() {
+  var Flex = function Flex() {};
+
+  var btn2 = new _button.default(_image.default);
+  var panel2 = new Panel(_button.default, Flex);
+}"
+`;
+
+exports[`babel-plugin-component-import/general property 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+ReactDOM.render(React.createElement(\\"div\\", {
+  component: _button.default
+}));
+var coms = {
+  button: _button.default
+};
+var btns = {
+  Button: _button.default
+};
+
+function render() {
+  var Button = function Button() {};
+
+  var cache = {
+    btn: Button
+  };
+}"
+`;
+
+exports[`babel-plugin-component-import/general statement if 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+if (_flex.default) {}
+
+if (a === _flex.default) {}
+
+if (a > _flex.default) {}
+
+function render() {
+  var Flex = function Flex() {};
+
+  if (Flex) {}
+
+  if (a === Flex) {}
+
+  if (a > Flex) {}
+}"
+`;
+
+exports[`babel-plugin-component-import/general statement return 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/toast/style/scss\\");
+
+var _toast2 = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/toast\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function a() {
+  return _toast2.default;
+}
+
+function b(toast) {
+  return toast;
+}
+
+function c() {
+  var toast = 'toast';
+  return toast;
+}
+
+function d() {
+  var toast = 'toast';
+  return function () {
+    return toast;
+  };
+}"
+`;
+
+exports[`babel-plugin-component-import/general statement switch 1`] = `
+"\\"use strict\\";
+
+require(\\"@tencent/comby-lib-mobile_default/dist/feed/style/scss\\");
+
+var _feed = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/feed\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/image/style/scss\\");
+
+var _image = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/image\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/button/style/scss\\");
+
+var _button = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/button\\"));
+
+require(\\"@tencent/comby-lib-mobile_default/dist/flex/style/scss\\");
+
+var _flex = _interopRequireDefault(require(\\"@tencent/comby-lib-mobile/components/flex\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ui = null;
+
+switch (ui) {
+  case _flex.default:
+    ui = 1;
+    break;
+
+  case _button.default:
+    ui = 2;
+    break;
+
+  case _image.default:
+    ui = 3;
+    break;
+
+  default:
+    ui = 4;
+}
+
+switch (_feed.default) {
+  case _flex.default:
+    ui = 1;
+    break;
+
+  case _button.default:
+    ui = 2;
+    break;
+
+  default:
+    ui = 4;
+}"
+`;
