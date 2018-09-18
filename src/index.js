@@ -30,10 +30,10 @@ export default declare(function createPlugin (api, {
   const { types } = api
 
   let pathToRemove = []
-  const importSpecifiers = {}
-  const importDefaultSpecifiers = {}
-  const importNamespaceSpecifiers = {}
-  const imported = {}
+  let importSpecifiers = {}
+  let importDefaultSpecifiers = {}
+  let importNamespaceSpecifiers = {}
+  let imported = {}
 
   function addImport (name, path) {
 
@@ -120,6 +120,13 @@ export default declare(function createPlugin (api, {
     visitor: {
 
       Program: {
+        enter () {
+          pathToRemove = []
+          importSpecifiers = {}
+          importDefaultSpecifiers = {}
+          importNamespaceSpecifiers = {}
+          imported = {}
+        },
         exit () {
           pathToRemove.forEach(path => !path.removed && path.remove())
         }

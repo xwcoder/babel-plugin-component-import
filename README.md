@@ -60,13 +60,13 @@ The component file name.
 ```javascript
 camel2DashComponentName: Boolean - default is true
 ```
-Whether transform component name from camel style to dash style.
+Transform component name from camel style to dash style if `true`
 
 ### camel2UnderlineComponentName
 ```javascript
 camel2UnderlineComponentName: Boolean - default is false
 ```
-Whether transform component name from camel style to underline style. Priority level is higher than `camel2DashComponentName`
+Transform component name from camel style to underline style if `true`. Priority level is higher than `camel2DashComponentName`
 
 ### styleLibraryName
 ```javascript
