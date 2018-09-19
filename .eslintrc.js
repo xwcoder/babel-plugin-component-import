@@ -3,7 +3,7 @@ const WARN = 1
 const ERROR = 2
 
 module.exports = {
-  // extends: 'airbnb',
+  extends: 'airbnb',
   parser: 'babel-eslint',
   env: {
     es6: true,
@@ -12,7 +12,8 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
-    'semi': [2, 'never' ],
+    'semi': [ERROR, 'never' ],
+    'max-len': [WARN, { code: 120 }],
     'padded-blocks': [OFF],
     'space-before-function-paren': [OFF],
     'comma-dangle': [OFF],

@@ -4,15 +4,15 @@ import { addDefault, addSideEffect } from '@babel/helper-module-imports'
 
 function camel2Dash(_str) {
   const str = _str[0].toLowerCase() + _str.substr(1)
-  return str.replace(/([A-Z])/g, ($1) => `-${$1.toLowerCase()}`)
+  return str.replace(/([A-Z])/g, $1 => `-${$1.toLowerCase()}`)
 }
 
 function camel2Underline(_str) {
   const str = _str[0].toLowerCase() + _str.substr(1)
-  return str.replace(/([A-Z])/g, ($1) => `_${$1.toLowerCase()}`)
+  return str.replace(/([A-Z])/g, $1 => `_${$1.toLowerCase()}`)
 }
 
-export default declare(function createPlugin (api, {
+export default declare((api, {
   libraryName,
   libraryDirectory = 'lib',
   style = false,
@@ -23,7 +23,7 @@ export default declare(function createPlugin (api, {
   styleLibraryName,
   styleDirectory = 'dist',
   styleLibraryPath,
-}) {
+}) => {
 
   api.assertVersion(7)
 
@@ -42,14 +42,14 @@ export default declare(function createPlugin (api, {
       let transformedName = name
 
       if (camel2UnderlineComponentName) {
-       transformedName = camel2Underline(name)
+        transformedName = camel2Underline(name)
       } else if (camel2DashComponentName) {
-       transformedName = camel2Dash(name)
+        transformedName = camel2Dash(name)
       }
 
       const importPath = customName
-                          ? customName(transformedMethodName)
-                          : join(libraryName, libraryDirectory, transformedName, fileName)
+        ? customName(transformedName)
+        : join(libraryName, libraryDirectory, transformedName, fileName)
 
       imported[name] = addDefault(path, importPath, { nameHint: name })
 
@@ -87,7 +87,7 @@ export default declare(function createPlugin (api, {
 
     const { scope } = path
 
-    props.forEach(prop => {
+    props.forEach((prop) => {
 
       const item = node[prop] || {}
       const { name } = item
@@ -100,17 +100,13 @@ export default declare(function createPlugin (api, {
 
       if (importSpecifiers[name] && types.isImportSpecifier(bindingPath)) {
 
+        // eslint-disable-next-line no-param-reassign
         node[prop] = addImport(importSpecifiers[name], path)
 
-      } else if (importDefaultSpecifiers[name] && types.isImportDefaultSpecifier(bindingPath)
-        || importNamespaceSpecifiers[name] && types.isImportNamespaceSpecifier(bindingPath)) {
+      } else if ((importDefaultSpecifiers[name] && types.isImportDefaultSpecifier(bindingPath))
+        || (importNamespaceSpecifiers[name] && types.isImportNamespaceSpecifier(bindingPath))) {
 
-        pathToRemove = pathToRemove.filter(itemPath =>
-          !itemPath.node.specifiers.some(specifier =>
-            (types.isImportDefaultSpecifier(specifier)
-              || types.isImportNamespaceSpecifier(specifier))
-            && specifier.local.name === name)
-        )
+        pathToRemove = pathToRemove.filter(itemPath => !itemPath.node.specifiers.some(specifier => (types.isImportDefaultSpecifier(specifier) || types.isImportNamespaceSpecifier(specifier)) && specifier.local.name === name))
       }
     })
   }
@@ -143,7 +139,7 @@ export default declare(function createPlugin (api, {
 
         if (value === libraryName) {
 
-          node.specifiers.forEach(specifier => {
+          node.specifiers.forEach((specifier) => {
 
             const localName = specifier.local.name
 
@@ -235,8 +231,8 @@ export default declare(function createPlugin (api, {
           return
         }
 
-        if (importDefaultSpecifiers[name] && types.isImportDefaultSpecifier(bindingPath)
-            || importNamespaceSpecifiers[name] && types.isImportNamespaceSpecifier(bindingPath)) {
+        if ((importDefaultSpecifiers[name] && types.isImportDefaultSpecifier(bindingPath))
+            || (importNamespaceSpecifiers[name] && types.isImportNamespaceSpecifier(bindingPath))) {
 
           path.replaceWith(addImport(node.property.name, path))
 
@@ -265,7 +261,7 @@ export default declare(function createPlugin (api, {
       ExportNamedDeclaration (path) {
         const { node: { specifiers } } = path
 
-        specifiers.forEach(specifiers => buildExpression(specifiers, ['local'], path))
+        specifiers.forEach(specifier => buildExpression(specifier, ['local'], path))
       }
     }
   }
