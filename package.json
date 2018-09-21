@@ -11,7 +11,8 @@
     "build": "babel ./src --out-dir lib --ignore test"
   },
   "pre-commit": [
-    "lint"
+    "lint",
+    "test"
   ],
   "author": "",
   "license": "ISC",
