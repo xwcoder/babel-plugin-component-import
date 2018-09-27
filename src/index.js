@@ -106,6 +106,7 @@ export default declare((api, {
       } else if ((importDefaultSpecifiers[name] && types.isImportDefaultSpecifier(bindingPath))
         || (importNamespaceSpecifiers[name] && types.isImportNamespaceSpecifier(bindingPath))) {
 
+        // eslint-disable-next-line max-len
         pathToRemove = pathToRemove.filter(itemPath => !itemPath.node.specifiers.some(specifier => (types.isImportDefaultSpecifier(specifier) || types.isImportNamespaceSpecifier(specifier)) && specifier.local.name === name))
       }
     })
